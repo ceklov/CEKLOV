@@ -1,10 +1,10 @@
 <template>
-    <h1>Picture</h1>
+    <h3>Header</h3>
 </template>
 
 <script>
 export default {
-  name: "PictureComponent",
+  name: "HeaderComponent",
   components: {},
 };
 </script>

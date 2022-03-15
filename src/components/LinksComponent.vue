@@ -1,15 +1,15 @@
 <template>
     <div>
-      <h2>Services</h2>
+      <h2>Links</h2>
     </div>
     <div>
-      <h3>Need something?</h3>
+      <h3>Just some extras</h3>
     </div>
 </template>
 
 <script>
 export default {
-  name: "ServicesComponent",
-  components: {},
+  name: "LinksComponent",
+  components: { },
 };
 </script>
