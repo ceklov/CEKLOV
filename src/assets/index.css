@@ -5,7 +5,7 @@
 @layer components {
     /* #region DEFAULTS */
     html {
-      @apply bg-gray-50 h-full;
+      @apply bg-zinc-200 h-full;
       scroll-behavior: smooth;
     }
   
