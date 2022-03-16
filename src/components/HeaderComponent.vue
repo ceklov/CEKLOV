@@ -195,6 +195,7 @@
             mt-2
           "
         >
+
           <li
             class="
               text-right
@@ -207,7 +208,7 @@
               hover:font-semibold
             "
           >
-            <a href="/#home">Home</a>
+            <a href="/#services" @click="close">Services</a>
           </li>
 
           <li
@@ -222,22 +223,7 @@
               hover:font-semibold
             "
           >
-            <a href="/#services">Services</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
-            "
-          >
-            <a href="/#work">Work</a>
+            <a href="/#work" @click="close">Work</a>
           </li>
           
            <li
@@ -252,7 +238,7 @@
               hover:font-semibold
             "
           >
-            <a href="/#contact">Contact</a>
+            <a href="/#contact" @click="close">Contact</a>
           </li>
           
           <li
@@ -267,7 +253,7 @@
               hover:font-semibold
             "
           >
-            <a href="/#links">Links</a>
+            <a href="/#links" @click="close">Links</a>
           </li>
 
           <li
@@ -300,8 +286,13 @@ export default {
   setup() {
     let show = ref(false);
     const isOpen = () => (show.value = !show.value);
-    const openResume = () => window.open("/src/assets/eklov-resume.pdf");
-    return { show, isOpen, openResume };
+    const close = () => (show.value = false);
+    const openResume = () => {
+      window.open("/eklov-resume.pdf");
+      close();
+    };
+
+    return { show, isOpen, openResume, close };
   },
 };
 </script>
