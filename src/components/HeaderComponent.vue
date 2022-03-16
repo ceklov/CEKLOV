@@ -52,7 +52,7 @@
               lg:mb-3
             "
           >
-            <a href="/">Home</a>
+            <a href="/#home">Home</a>
           </li>
 
           <li
@@ -67,7 +67,7 @@
               lg:mb-3
             "
           >
-            <a href="/">Services</a>
+            <a href="/#services">Services</a>
           </li>
 
           <li
@@ -82,7 +82,7 @@
               lg:mb-3
             "
           >
-            <a href="/">Work</a>
+            <a href="/#work">Work</a>
           </li>
           
           <li
@@ -97,7 +97,7 @@
               lg:mb-3
             "
           >
-            <a href="/">Contact</a>
+            <a href="/#contact">Contact</a>
           </li>
           
           <li
@@ -112,7 +112,7 @@
               lg:mb-3
             "
           >
-            <a href="/" target="_blank">Links</a>
+            <a href="/#links">Links</a>
           </li>
 
           <li
@@ -209,7 +209,7 @@
               hover:font-semibold
             "
           >
-            <a href="/">Home</a>
+            <a href="/#home">Home</a>
           </li>
 
           <li
@@ -224,7 +224,7 @@
               hover:font-semibold
             "
           >
-            <a href="/">Services</a>
+            <a href="/#services">Services</a>
           </li>
 
           <li
@@ -239,7 +239,7 @@
               hover:font-semibold
             "
           >
-            <a href="/">Work</a>
+            <a href="/#work">Work</a>
           </li>
           
            <li
@@ -254,7 +254,7 @@
               hover:font-semibold
             "
           >
-            <a href="/">Contact</a>
+            <a href="/#contact">Contact</a>
           </li>
           
           <li
@@ -269,7 +269,7 @@
               hover:font-semibold
             "
           >
-            <a href="/">Links</a>
+            <a href="/#links">Links</a>
           </li>
 
           <li
