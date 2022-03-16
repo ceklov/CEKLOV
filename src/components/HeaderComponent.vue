@@ -2,11 +2,9 @@
   <header class="absolute w-full z-50">
     <nav
       class="
-        max-w-screen-xl
         flex flex-row flex-wrap
         justify-between
         my-3
-        mx-auto
         lg:items-start
       "
       role="navigation"
@@ -127,7 +125,7 @@
               lg:mb-3
             "
           >
-            <a href="/resume.pdf" target="_blank">Resume</a>
+            <a href="/eklov-resume.pdf" target="_blank">Resume</a>
           </li>
         </ul>
       </div>
@@ -284,7 +282,7 @@
               hover:font-semibold
             "
           >
-            <a href="/resume.pdf" target="_blank">Resume</a>
+            <a href="../assets/eklov-resume.pdf" target="_blank">Resume</a>
           </li>
 
         </ul>
