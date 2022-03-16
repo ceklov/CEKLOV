@@ -282,7 +282,7 @@
               hover:font-semibold
             "
           >
-            <a href="../assets/eklov-resume.pdf" target="_blank">Resume</a>
+            <a href="#" @click="openResume">Resume</a>
           </li>
 
         </ul>
@@ -300,7 +300,8 @@ export default {
   setup() {
     let show = ref(false);
     const isOpen = () => (show.value = !show.value);
-    return { show, isOpen };
+    const openResume = () => window.open("/src/assets/eklov-resume.pdf");
+    return { show, isOpen, openResume };
   },
 };
 </script>
