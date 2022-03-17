@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center pt-20 lg:pt-40 pb-20">
+  <section id="services" class="flex flex-col items-center pt-20 lg:pt-40 pb-20">
     <h2
       class="
         thick_underline
