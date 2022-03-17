@@ -1,21 +1,16 @@
 <template>
   <header class="absolute w-full z-50">
     <nav
-      class="
-        flex flex-row flex-wrap
-        justify-between
-        my-3
-        lg:items-start
-      "
+      class="flex flex-row flex-wrap justify-between my-3 lg:items-start"
       role="navigation"
     >
       <div class="flex items-center ml-3">
         <a class="flex" href="/">
-          <img src="../assets/favicon-32x32.png" class="opacity-90"/>
+          <img src="../assets/favicon-32x32.png" class="opacity-90" />
         </a>
       </div>
 
-<!-- 
+      <!-- 
       <div
         id="lg-nav-content"
         class="
@@ -176,14 +171,7 @@
         </button>
       </div>
 
-      <div
-        id="sm-nav-content"
-        v-show="show"
-        class="
-          w-full
-          mr-3
-        "
-      >
+      <div id="sm-nav-content" v-show="show" class="w-full mr-3">
         <ul
           class="
             flex flex-col
@@ -195,7 +183,6 @@
             mt-2
           "
         >
-
           <li
             class="
               text-right
@@ -203,9 +190,7 @@
               px-2
               mb-4
               w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
+              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
             <a href="/#services" @click="close">Services</a>
@@ -218,29 +203,12 @@
               px-2
               mb-4
               w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
+              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
             <a href="/#work" @click="close">Work</a>
           </li>
-          
-           <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
-            "
-          >
-            <a href="/#contact" @click="close">Contact</a>
-          </li>
-          
+
           <li
             class="
               text-right
@@ -248,9 +216,20 @@
               px-2
               mb-4
               w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
+              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
+            "
+          >
+            <a href="/#contact" @click="close">Contact</a>
+          </li>
+
+          <li
+            class="
+              text-right
+              uppercase
+              px-2
+              mb-4
+              w-28
+              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
             <a href="/#links" @click="close">Links</a>
@@ -263,14 +242,11 @@
               px-2
               mb-4
               w-28
-            hover:bg-zinc-200
-            hover:text-zinc-800
-              hover:font-semibold
+              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a href="#" @click="openResume">Resume</a>
+            <a href="/eklov-resume.pdf" target="_blank" @click="close">Resume</a>
           </li>
-
         </ul>
       </div>
     </nav>
@@ -287,12 +263,7 @@ export default {
     let show = ref(false);
     const isOpen = () => (show.value = !show.value);
     const close = () => (show.value = false);
-    const openResume = () => {
-      window.open("/eklov-resume.pdf");
-      close();
-    };
-
-    return { show, isOpen, openResume, close };
+    return { show, isOpen, close };
   },
 };
 </script>
