@@ -12,7 +12,7 @@
     >
       Services
     </h2>
-    <div class="flex flex-row flex-wrap justify-center pt-30 max-w-screen-2xl">
+    <div class="flex flex-row flex-wrap justify-center mt-9 pt-30 max-w-screen-2xl">
       <div
         class="
           flex flex-col
@@ -21,7 +21,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>
@@ -56,7 +55,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>
@@ -91,7 +89,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>
@@ -126,7 +123,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>
@@ -161,7 +157,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>
@@ -196,7 +191,6 @@
           w-80
           lg:w-2/5
           m-9
-          lg:block lg:text-left
         "
       >
         <div>

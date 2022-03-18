@@ -19,14 +19,14 @@
       </div>
 
       <div class="flex lg:flex-row flex-col flex-wrap justify-center mt-7 max-w-screen-2xl">
-        <div class="flex flex-col md:flex-row text-center items-center w-72 mx-4 my-7 md:block">
-          <h3 class="text-2xl font-medium text-zinc-300">Software Development</h3>
+        <div class="flex flex-col md:flex-row text-center items-center w-80 lg:w-96 mx-2 my-7 md:block">
+          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Software Development</h3>
         </div>
-        <div class="flex flex-col md:flex-row text-center items-center w-72 mx-4 my-7 md:block">
-          <h3 class="text-2xl font-medium text-zinc-300">Web Design</h3>
+        <div class="flex flex-col md:flex-row text-center items-center w-80 lg:w-96 mx-2 my-7 md:block">
+          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Web Design</h3>
         </div>
-        <div class="flex flex-col md:flex-row text-center items-center w-72 mx-4 my-7 md:block">
-          <h3 class="text-2xl font-medium text-zinc-300">Problem Solving</h3>
+        <div class="flex flex-col md:flex-row text-center items-center w-80 lg:w-96 mx-2 my-7 md:block">
+          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Problem Solving</h3>
         </div>
       </div>
     </div>
