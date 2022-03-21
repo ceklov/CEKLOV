@@ -10,7 +10,6 @@
         </a>
       </div>
 
-      <!-- 
       <div
         id="lg-nav-content"
         class="
@@ -24,109 +23,46 @@
       >
         <ul
           class="
-            flex flex-col
+            flex
             text-sm
             font-medium
             tracking-widest
             text-zinc-200
             mt-2
-            w-28
           "
         >
           <li
+            v-for="link in links"
+            :key="link.id"
             class="
-              text-right
               uppercase
               hover:bg-zinc-200
               hover:text-zinc-800
               hover:font-semibold
               px-2
-              mb-4
-              lg:mb-3
+              mb-3
+              w-36
             "
           >
-            <a href="/#home">Home</a>
+            <a :href="'/#' + link.link">{{ link.link }}</a>
           </li>
-
           <li
             class="
-              text-right
               uppercase
               hover:bg-zinc-200
               hover:text-zinc-800
               hover:font-semibold
               px-2
-              mb-4
-              lg:mb-3
+              mb-3
+              w-36
             "
           >
-            <a href="/#services">Services</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-4
-              lg:mb-3
-            "
-          >
-            <a href="/#work">Work</a>
-          </li>
-          
-          <li
-            class="
-              text-right
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-4
-              lg:mb-3
-            "
-          >
-            <a href="/#contact">Contact</a>
-          </li>
-          
-          <li
-            class="
-              text-right
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-4
-              lg:mb-3
-            "
-          >
-            <a href="/#links">Links</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-4
-              lg:mb-3
-            "
-          >
-            <a href="/eklov-resume.pdf" target="_blank">Resume</a>
+            <a href="/eklov-resume.pdf" _target="blank">Resume</a>
           </li>
         </ul>
       </div>
--->
 
-      <div class="inline-block h-8 mr-3">
+      <div class="inline-block h-8 mr-3 lg:hidden">
         <button id="nav-button" class="h-full w-full" @click="isOpen">
           <svg
             class="h-full w-auto"
@@ -195,7 +131,7 @@
               hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a :href="'/#' + link.link + ''" @click="close">{{ link.link }}</a>
+            <a :href="'/#' + link.link" @click="close">{{ link.link }}</a>
           </li>
 
           <li

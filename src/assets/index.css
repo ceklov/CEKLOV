@@ -4,6 +4,7 @@
 
 @layer components {
     /* #region DEFAULTS */
+
     html {
       @apply bg-zinc-200 h-full;
       scroll-behavior: smooth;
@@ -19,6 +20,10 @@
 
     h3 {
         @apply text-zinc-800;
+    }
+
+    .w-88 {
+      width: 22rem;
     }
 
     /* #endregion */

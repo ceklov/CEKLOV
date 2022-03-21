@@ -43,7 +43,7 @@
             text-center
             items-center
             w-80
-            lg:w-96
+            lg:w-88
             mx-2
             my-7
             md:block
