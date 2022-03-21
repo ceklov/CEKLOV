@@ -12,6 +12,7 @@
 <script>
 export default {
   name: "ContactComponent",
-  components: { },
+  components: {},
+  setup() {}
 };
 </script>

@@ -8,7 +8,8 @@
       <div>
         <h1
           class="
-            text-center text-6xl
+            text-center text-5xl
+            md:text-6xl
             mt-48
             md:m-24
             uppercase
@@ -28,7 +29,7 @@
           <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Web Design</h3>
         </div>
         <div class="flex flex-col md:flex-row text-center items-center w-80 lg:w-96 mx-2 my-7 md:block">
-          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Problem Solving</h3>
+          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">Quality</h3>
         </div>
       </div>
     </div>
