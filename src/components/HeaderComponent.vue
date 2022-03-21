@@ -184,55 +184,18 @@
           "
         >
           <li
+            v-for="link in links"
+            :key=link.id
             class="
               text-right
               uppercase
               px-2
               mb-4
-              w-28
+              w-36
               hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a href="/#services" @click="close">Services</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
-            "
-          >
-            <a href="/#work" @click="close">Work</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
-            "
-          >
-            <a href="/#contact" @click="close">Contact</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
-            "
-          >
-            <a href="/#links" @click="close">Links</a>
+            <a :href='"/#" + link.link +""' @click="close">{{ link.link }}</a>
           </li>
 
           <li
@@ -260,10 +223,18 @@ export default {
   name: "HeaderComponent",
   components: {},
   setup() {
+    const links = [
+      { id: 1, link: "services" },
+      { id: 2, link: "work" },
+      { id: 3, link: "technology" },
+      { id: 4, link: "contact" },
+      { id: 5, link: "links" }
+    ];
+
     let show = ref(false);
     const isOpen = () => (show.value = !show.value);
     const close = () => (show.value = false);
-    return { show, isOpen, close };
+    return { show, isOpen, close, links };
   },
 };
 </script>

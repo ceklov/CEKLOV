@@ -9,6 +9,8 @@
         <h1
           class="
             text-center text-6xl
+            mt-48
+            md:m-24
             uppercase
             text-zinc-200
             font-medium
