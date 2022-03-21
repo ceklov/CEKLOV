@@ -195,7 +195,7 @@
               hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a :href='"/#" + link.link +""' @click="close">{{ link.link }}</a>
+            <a :href='"/#" + link.link + ""' @click="close">{{ link.link }}</a>
           </li>
 
           <li

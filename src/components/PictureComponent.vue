@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="landing-picture h-screen flex items-center justify-center">
+  <section id="home" class="landing-picture h-screen flex items-center justify-center bg-fixed">
     <div
       class="absolute top-0 left-0 w-full h-full bg-zinc-800 opacity-60 z-10"
     ></div>
