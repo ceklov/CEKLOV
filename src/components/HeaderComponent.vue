@@ -107,7 +107,7 @@
         </button>
       </div>
 
-      <div id="sm-nav-content" v-show="show" class="w-full mr-3">
+      <div id="sm-nav-content" v-show="show" class="w-full mr-3 lg:hidden">
         <ul
           class="
             flex flex-col

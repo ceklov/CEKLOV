@@ -11,10 +11,10 @@
       <div>
         <h1
           class="
-            text-center text-5xl
-            md:text-6xl
+            text-center
+            text-6xl
             mt-48
-            md:m-24
+            lg:m-24
             uppercase
             text-zinc-200
             font-medium
