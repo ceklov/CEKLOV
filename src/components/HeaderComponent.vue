@@ -185,7 +185,7 @@
         >
           <li
             v-for="link in links"
-            :key=link.id
+            :key="link.id"
             class="
               text-right
               uppercase
@@ -195,7 +195,7 @@
               hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a :href='"/#" + link.link + ""' @click="close">{{ link.link }}</a>
+            <a :href="'/#' + link.link + ''" @click="close">{{ link.link }}</a>
           </li>
 
           <li
@@ -208,7 +208,9 @@
               hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
             "
           >
-            <a href="/eklov-resume.pdf" target="_blank" @click="close">Resume</a>
+            <a href="/eklov-resume.pdf" target="_blank" @click="close"
+              >Resume</a
+            >
           </li>
         </ul>
       </div>
@@ -228,7 +230,7 @@ export default {
       { id: 2, link: "work" },
       { id: 3, link: "technology" },
       { id: 4, link: "contact" },
-      { id: 5, link: "links" }
+      { id: 5, link: "links" },
     ];
 
     let show = ref(false);

@@ -13,6 +13,6 @@
 export default {
   name: "ContactComponent",
   components: {},
-  setup() {}
+  setup() {},
 };
 </script>

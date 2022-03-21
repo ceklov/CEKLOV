@@ -6,7 +6,7 @@
     <div>
       <h3>Take a look</h3>
     </div>
-    <div v-for="project in projects" :key=project.id>
+    <div v-for="project in projects" :key="project.id">
       {{ project.name }}
     </div>
   </section>
@@ -23,6 +23,6 @@ export default {
       { id: 3, name: "Example 3", link: "", img: "" },
     ];
     return { projects };
-  }
+  },
 };
 </script>

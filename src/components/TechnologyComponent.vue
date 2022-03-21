@@ -6,7 +6,7 @@
     <div>
       <h3>What I use</h3>
     </div>
-    <div v-for="tech in techs" :key=tech.id>
+    <div v-for="tech in techs" :key="tech.id">
       {{ tech.name }}
     </div>
   </section>
@@ -29,9 +29,9 @@ export default {
       { id: 9, name: "MySQL" },
       { id: 10, name: "Git" },
       { id: 11, name: "Jenkins" },
-      { id: 12, name: ".NET" }
+      { id: 12, name: ".NET" },
     ];
     return { techs };
-  }
+  },
 };
 </script>
