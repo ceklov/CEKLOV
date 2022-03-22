@@ -77,24 +77,27 @@
       @apply text-transparent;
     }
   
-    form .input-animated input,
+    form .input-animated input {
+      @apply text-zinc-600;
+    }
+
     form .input-animated label {
-      @apply text-gray-600;
+      @apply text-zinc-600 left-1;
     }
   
     form .input-animated label {
-      @apply absolute top-0 w-full h-full pointer-events-none border-b-2 border-gray-200;
+      @apply absolute top-0 w-full h-full pointer-events-none border-b-2 border-zinc-200;
     }
   
     form .input-animated label:after {
       content: '';
       bottom: -2px;
       border-color: var(--underline);
-      @apply absolute w-full h-full border-b-2 left-0 transition duration-300 ease-linear transform -translate-x-full;
+      @apply absolute w-full h-full border-b-2 left-1 transition duration-300 ease-linear transform -translate-x-3/4;
     }
   
     form .input-animated label span {
-      @apply absolute bottom-2 left-0;
+      @apply absolute bottom-4 left-1;
       transition: all 0.3s ease;
     }
   
@@ -131,14 +134,14 @@
     form .input-animated input:focus + label span,
     form .input-animated input:valid + label span,
     form .input-animated input:not(:placeholder-shown) + label span {
-      transform: translateY(-200%);
+      transform: translateY(-150%);
       @apply text-xs font-medium;
     }
   
     form .input-animated input:focus + label:after,
     form input:valid + label:after,
     form input:not(:placeholder-shown) + label:after {
-      transform: translateX(0%);
+      transform: translateX(50%);
     }
   
     form input:invalid {

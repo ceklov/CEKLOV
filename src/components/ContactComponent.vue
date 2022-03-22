@@ -7,21 +7,21 @@
       <h4>Drop me a line</h4>
     </div>
     
-    <!--<div
+    <div
       class="flex-grow justify-center px-8 lg:px-20"
     >
       <div class="flex justify-center">
         <div>
      
           <form
-            id="contact"
-            name="contact"
+            id="contact-form"
+            name="contact-form"
             method="post"
             data-netlify="true"
             autocomplete="off"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact-form" />
             <div class="input-animated">
               <input
                 type="text"
@@ -122,7 +122,7 @@
           </form>
         </div>
       </div>
-    </div>-->
+    </div>
   </section>
 </template>
 
@@ -146,7 +146,7 @@ export default {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      const form = document.getElementById("contact");
+      const form = document.getElementById("contact-form");
       const formData = new FormData(form);
 
       fetch("/", {
