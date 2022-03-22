@@ -1,10 +1,10 @@
 <template>
-  <section id="links">
+  <section id="links" class="lower-section">
     <div>
       <h2>Links</h2>
     </div>
     <div>
-      <h3>Just some extras</h3>
+      <h4>Just some extras</h4>
     </div>
     <div v-for="link in links" :key="link.id">
       <a :href="link.link">{{ link.text }}</a>

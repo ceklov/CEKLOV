@@ -1,10 +1,10 @@
 <template>
-  <section id="technology">
+  <section id="technology" class="lower-section">
     <div>
       <h2>Technology Expertise</h2>
     </div>
     <div>
-      <h3>What I use</h3>
+      <h4>Including but not limited to</h4>
     </div>
     <div v-for="tech in techs" :key="tech.id">
       {{ tech.name }}

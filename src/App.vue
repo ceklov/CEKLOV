@@ -1,7 +1,7 @@
 <template>
   <div class="bg-zinc-200">
     <header-component></header-component>
-    <picture-component></picture-component>
+    <landing-component></landing-component>
     <services-component></services-component>
     <work-component></work-component>
     <technology-component></technology-component>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PictureComponent from './components/PictureComponent.vue'
+import LandingComponent from './components/LandingComponent.vue'
 import ServicesComponent from './components/ServicesComponent.vue'
 import WorkComponent from './components/WorkComponent.vue'
 import TechnologyComponent from './components/TechnologyComponent.vue'
@@ -22,7 +22,7 @@ import HeaderComponent from './components/HeaderComponent.vue'
 export default {
   name: 'App',
   components: {
-    PictureComponent,
+    LandingComponent,
     ServicesComponent,
     WorkComponent,
     TechnologyComponent,

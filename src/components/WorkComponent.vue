@@ -1,10 +1,10 @@
 <template>
-  <section id="work">
+  <section id="work" class="lower-section">
     <div>
       <h2>My Work</h2>
     </div>
     <div>
-      <h3>Take a look</h3>
+      <h4>Take a look</h4>
     </div>
     <div v-for="project in projects" :key="project.id">
       {{ project.name }}

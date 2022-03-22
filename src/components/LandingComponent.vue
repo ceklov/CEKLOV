@@ -49,7 +49,7 @@
             md:block
           "
         >
-          <h3 class="text-2xl lg:text-3xl font-medium text-zinc-300">
+          <h3>
             {{ caption.text }}
           </h3>
         </div>
@@ -60,7 +60,7 @@
 
 <script>
 export default {
-  name: "PictureComponent",
+  name: "LandingComponent",
   components: {},
   setup() {
     const captions = [
