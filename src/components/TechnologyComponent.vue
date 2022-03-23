@@ -23,8 +23,8 @@
           left-0
           flex
           justify-center
-          mb-9
-          lg:mb-6
+          mb-20
+          lg:mb-32
         "
       >
         <button
@@ -60,10 +60,7 @@
             "
           >
             <h5 class="text-2xl">{{ tech.label }}</h5>
-            <p class="
-              hidden
-              lg:block"
-            >
+            <p class="mt-9 lg:mt-2">
               {{ tech.caption }}
             </p>
           </div>
