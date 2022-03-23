@@ -54,6 +54,11 @@
       background-position: center;
     }
 
+    #tech-carousel {
+      @apply mt-9;
+      height: 448px;
+    }
+
     /* #endregion */
   
     /* #region Contact Form */
