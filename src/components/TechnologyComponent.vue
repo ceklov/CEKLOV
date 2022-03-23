@@ -144,28 +144,26 @@ export default {
         caption:
           "The front-end JavaScript framework with which I have the most experience.",
       },
-/*       {
+      {
         id: 3,
         name: "JavaScript",
-        src: "javascript.png",
+        src: "javascript.svg",
         label: "JavaScript",
         caption: "The programming language ubiquitous in web development.",
       },
       {
         id: 4,
         name: "Angular",
-        src: "angular.png",
+        src: "angular.svg",
         label: "Angular",
-        caption: "Another front-end JavaScript framework I use.",
-      }, */
-      //{ id: 5, name: "HTML 5", src: "html.png", label: "HTML", caption: "Well, duh. Of course I know HTML." },
-      //{ id: 6, name: "CSS 3", src: "", label: "", caption: "" },
-      //{ id: 7, name: "Spring", src: "", label: "", caption: "" },
-      //{ id: 8, name: "Microsft SQL Server", src: "", label: "", caption: "" },
-      //{ id: 9, name: "MySQL", src: "", label: "", caption: "" },
-      //{ id: 10, name: "Git", src: "", label: "", caption: "" },
-      //{ id: 11, name: "Jenkins", src: "", label: "", caption: "" },
-      //{ id: 12, name: ".NET", src: "", label: "", caption: "" },
+        caption: "Another front-end JavaScript framework I have been known to use.",
+      },
+      { id: 5, name: "HTML 5", src: "html.svg", label: "HyperText Markup Language", caption: "No surprise here. You must have some knowledge of this markup." },
+      { id: 6, name: "CSS 3", src: "css.svg", label: "Cascading Style Sheets", caption: "Websites would just be so bland without a little extra style." },
+      { id: 7, name: "Spring", src: "spring.svg", label: "Spring Framework", caption: "Spring Boot, Data, Security, and more complements my work with Java." },
+      { id: 8, name: "Microsft SQL Server", src: "ms-sql-server.svg", label: "Microsoft SQL Server", caption: "How I have mainly (but not exclusively) worked with data using SQL." },
+      { id: 9, name: "Git", src: "git.svg", label: "Git", caption: "GitHub and GitLab are my primary project repositories. I also enjoy the Git command line." },
+      { id: 10, name: "Jenkins", src: "jenkins.svg", label: "Jenkins", caption: "It's hard to develop software without a reliable source of building and deploying like Jenkins." },
     ];
     return { techs };
   },
