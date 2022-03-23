@@ -77,6 +77,8 @@
           left-0
           md:left-20
           lg:left-28
+          xl:left-36
+          2xl:left-44
         "
         type="button"
         data-bs-target="#tech-carousel"
@@ -105,6 +107,8 @@
           right-0
           md:right-20
           lg:right-28
+          xl:right-36
+          2xl:right-44
         "
         type="button"
         data-bs-target="#tech-carousel"
