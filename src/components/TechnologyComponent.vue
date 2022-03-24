@@ -1,216 +1,143 @@
 <template>
   <section id="technology" class="lower-section bg-zinc-800">
     <div>
-      <h2 class="text-zinc-200">My Technology</h2>
+      <h2 class="text-zinc-200">Technology</h2>
     </div>
 
     <div>
       <h4>Including but not limited to</h4>
     </div>
 
-    <div
-      id="tech-carousel"
-      class="carousel slide relative flex justify-center"
-      data-bs-ride="carousel"
+    <swiper
+      id="tech-swiper"
+      :modules="modules"
+      :slides-per-view="1"
+      :space-between="50"
+      navigation
+      autoplay
+      :pagination="{ clickable: true }"
+      class="my-9 h-88"
     >
-      <div
-        id="tech-carousel-indicators-container"
-        class="
-          carousel-indicators
-          absolute
-          right-0
-          bottom-0
-          left-0
-          flex
-          justify-center
-          mb-20
-          lg:mb-32
-        "
+      <swiper-slide
+        v-for="(tech, index) in techs"
+        :key="index"
+        :virtualIndex="index"
+        class="px-3 flex flex-col justify-center"
       >
-        <button
-          v-for="tech in techs"
-          :key="tech.id"
-          type="button"
-          data-bs-target="#tech-carousel"
-          :data-bs-slide-to="tech.id - 1"
-          :class="tech.id == 1 ? 'active' : ''"
-          :aria-current="tech.id == 1 ? 'true' : 'false'"
-          :aria-label="'Slide ' + tech.id"
-        ></button>
-      </div>
-      <div class="carousel-inner relative w-96 h-80">
-        <div
-          v-for="tech in techs"
-          :key="tech.id"
-          :class="
-            tech.id == 1
-              ? 'tech-carousel-item carousel-item active relative float-left w-full'
-              : 'tech-carousel-item carousel-item relative float-left w-full'
-          "
-        >
-          <img
-            :src="require('@/assets/technology/' + tech.src)"
-            :alt="tech.name"
-          />
-          <div class="tech-carousel-caption carousel-caption text-center">
-            <h5 class="text-2xl">{{ tech.label }}</h5>
-            <p class="mt-9 lg:mt-2">
-              {{ tech.caption }}
-            </p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="
-          carousel-control-prev
-          absolute
-          top-0
-          bottom-0
-          flex
-          items-center
-          justify-center
-          p-0
-          text-center
-          border-0
-          hover:outline-none hover:no-underline
-          focus:outline-none focus:no-underline
-          left-0
-          md:left-20
-          lg:left-28
-          xl:left-36
-          2xl:left-44
-        "
-        type="button"
-        data-bs-target="#tech-carousel"
-        data-bs-slide="prev"
-      >
-        <span
-          class="carousel-control-prev-icon inline-block bg-no-repeat"
-          aria-hidden="true"
-        ></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="
-          carousel-control-next
-          absolute
-          top-0
-          bottom-0
-          flex
-          items-center
-          justify-center
-          p-0
-          text-center
-          border-0
-          hover:outline-none hover:no-underline
-          focus:outline-none focus:no-underline
-          right-0
-          md:right-20
-          lg:right-28
-          xl:right-36
-          2xl:right-44
-        "
-        type="button"
-        data-bs-target="#tech-carousel"
-        data-bs-slide="next"
-      >
-        <span
-          class="carousel-control-next-icon inline-block bg-no-repeat"
-          aria-hidden="true"
-        ></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+        <img
+          :src="require('@/assets/technology/' + tech.src)"
+          :alt="tech.name"
+        />
+        <h5 class="text-zinc-200 text-2xl mt-6 lg:mt-5">
+          {{ tech.name }}
+        </h5>
+        <p class="text-zinc-200 mt-6 mb-12 lg:mt-5">
+          {{ tech.caption }}
+        </p>
+      </swiper-slide>
+
+    </swiper>
   </section>
 </template>
 
 <script>
+  // import Swiper core and required modules
+  import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
 export default {
   name: "TechnologyComponent",
-  components: {},
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   setup() {
     const techs = [
       {
-        id: 1,
         name: "Java",
         src: "java.svg",
-        label: "Java",
         caption:
           "The back-end programming language with which I have the most experience.",
       },
       {
-        id: 2,
         name: "Vue.js",
         src: "vue.svg",
-        label: "Vue.js",
         caption:
           "The front-end JavaScript framework with which I have the most experience.",
       },
       {
-        id: 3,
         name: "JavaScript",
         src: "javascript.svg",
-        label: "JavaScript",
-        caption: "The programming language ubiquitous in web development.",
+        caption: "The programming language ubiquitous in web app development.",
       },
       {
-        id: 4,
         name: "Angular",
         src: "angular.svg",
-        label: "Angular",
         caption:
           "Another front-end JavaScript framework I have been known to use.",
       },
       {
-        id: 5,
         name: "HTML 5",
         src: "html.svg",
-        label: "HyperText Markup Language",
         caption:
-          "No surprise here. You must have some knowledge of this markup.",
+          "It's hard to make it very far without knowledge of this markup.",
       },
       {
-        id: 6,
         name: "CSS 3",
         src: "css.svg",
-        label: "Cascading Style Sheets",
         caption:
           "Websites would just be so bland without a little extra style.",
       },
       {
-        id: 7,
-        name: "Spring",
+        name: "Spring Framework",
         src: "spring.svg",
-        label: "Spring Framework",
         caption:
-          "Spring Boot, Data, Security, and more complements my work with Java.",
+          "Spring Boot, Data, Security, and more for my work with Java.",
       },
       {
-        id: 8,
         name: "Microsft SQL Server",
         src: "ms-sql-server.svg",
-        label: "Microsoft SQL Server",
         caption:
-          "How I have mainly (but not exclusively) worked with data using SQL.",
+          "How I have mainly (but not exclusively) worked with SQL and databases.",
       },
       {
-        id: 9,
         name: "Git",
         src: "git.svg",
-        label: "Git",
         caption:
-          "GitHub and GitLab are my primary project repositories. I also enjoy the Git command line.",
+          "My primary repository for both personal and professional work.",
       },
       {
-        id: 10,
         name: "Jenkins",
         src: "jenkins.svg",
-        label: "Jenkins",
         caption:
-          "It's hard to develop software without a reliable source of building and deploying like Jenkins.",
+          "My primary tool for building and deploying.",
       },
     ];
-    return { techs };
+
+    return {
+      techs,
+      modules: [Navigation, Pagination, A11y, Autoplay],
+    };
   },
 };
 </script>
+
+<style scoped>
+
+.swiper-button-prev {
+  right: 0px;
+}
+
+.swiper-button-next {
+  left: 0px;
+}
+
+</style>
+

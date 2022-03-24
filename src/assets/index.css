@@ -54,9 +54,27 @@
       background-position: center;
     }
 
-    #tech-carousel {
-      @apply mt-9;
-      height: 560px;
+    #technology {
+      height: 740px;
+    }
+
+    #tech-swiper {
+      @apply w-96;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #tech-swiper {
+        width: 576px;
+      }
+    }
+
+    .w-576 {
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #technology {
+        height: 940px;
+      }
     }
 
     /* #endregion */
