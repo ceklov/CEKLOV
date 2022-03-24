@@ -15,6 +15,7 @@
       :space-between="50"
       navigation
       autoplay
+      :speed="1000"
       :pagination="{ clickable: true }"
       class="my-9 h-88"
     >
@@ -23,6 +24,7 @@
         :key="index"
         :virtualIndex="index"
         class="px-3 flex flex-col justify-center"
+        data-swiper-autoplay="4200"
       >
         <img
           :src="require('@/assets/technology/' + tech.src)"
