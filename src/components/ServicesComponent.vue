@@ -4,10 +4,13 @@
 
     <h4>What I can do for you</h4>
 
-    <div class="flex flex-row flex-wrap justify-center mt-9 max-w-screen-2xl">
+    <div
+      id="services-wrapper"
+      class="flex flex-row flex-wrap justify-center mt-9 max-w-screen-2xl"
+    >
       <div
-        v-for="service in services"
-        :key="service.id"
+        v-for="(service, index) in services"
+        :key="index"
         class="flex flex-col text-center items-center w-80 lg:w-2/5 m-9"
       >
         <div>
@@ -24,27 +27,50 @@
             </svg>
           </div>
         </div>
-        <details open>
-          <summary>
-            {{ service.header }}
-          </summary>
-          <p>
-            {{ service.snippet }}
-          </p>
-        </details>
+
+        <Waypoint
+          :options="options"
+          @change="fadeInServiceSnippet"
+        >
+          <details open @click.prevent>
+            <summary>
+              {{ service.header }}
+            </summary>
+            <p class="service-snippet text-zinc-200">
+              {{ service.snippet }}
+            </p>
+          </details>
+        </Waypoint>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { Waypoint } from "vue-waypoint";
+
 export default {
   name: "ServicesComponent",
-  components: {},
+  components: { Waypoint },
   setup() {
+
+    const options = {
+      root: document.getElementById("services-wrapper"),
+      rootMargin: "0px",
+      threshold: 0.75
+    }
+
+    const fadeInServiceSnippet = (waypointState) => {
+      if (waypointState.going === "IN" && waypointState.el.getElementsByTagName("p")[0].classList.contains("text-zinc-200")) {
+        let snippet = waypointState.el.getElementsByTagName("p")[0];
+        snippet.classList.remove("text-zinc-200");
+        snippet.classList.add("fade-in-service-snippet");
+        snippet.classList.add("text-zinc-600");
+      }
+    };
+
     const services = [
       {
-        id: 1,
         header: "Quality Software",
         snippet:
           "A number of programming languages. Source control. Integrated Development Environments (IDEs). Object-Oriented Principles (OOP) and best practices.",
@@ -52,7 +78,6 @@ export default {
         viewbox: "0 0 1024 1024",
       },
       {
-        id: 2,
         header: "Web Development",
         snippet:
           "Beautiful web sites. Mobile-first design. Single Page Applications (SPAs). Responsive design. Great performance. Search Engine Optimization (SEO). A variety of hosting services.",
@@ -60,7 +85,6 @@ export default {
         viewbox: "0 0 512 512",
       },
       {
-        id: 3,
         header: "APIs",
         snippet:
           "REpresentational State Transfer (REST). API creation and consumption. Microservices architecture. JSON. SOAP. XML. You name it.",
@@ -68,7 +92,6 @@ export default {
         viewbox: "0 0 419 419",
       },
       {
-        id: 4,
         header: "Data Management",
         snippet:
           "Create, read, update, and delete (CRUD) operations. Performance optimization. Database normalization. Other good things.",
@@ -76,7 +99,6 @@ export default {
         viewbox: "0 0 512 512",
       },
       {
-        id: 5,
         header: "Security",
         snippet:
           "Identity and Access Management (IAM). Encryption. Cryptography. OWASP Top 10 threat mitigation. Sleep better at night.",
@@ -84,7 +106,8 @@ export default {
         viewbox: "0 0 490 490",
       },
     ];
-    return { services };
+
+    return { services, fadeInServiceSnippet, options };
   },
 };
 </script>

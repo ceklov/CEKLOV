@@ -32,7 +32,6 @@
 
     details > summary {
       list-style-type: none;
-      cursor: pointer;
       @apply text-2xl font-semibold text-zinc-800;
     }
 
@@ -42,6 +41,18 @@
 
     .lower-section {
       @apply pt-20 lg:pt-32;
+    }
+
+    .fade-in-service-snippet {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0%    { color: #E4E4E7 }
+      25%   { color: #D4D4D8 }
+      50%   { color: #A1A1AA }
+      75%   { color: #71717A }
+      100%  { color: #52525B }
     }
 
     /* #endregion */
