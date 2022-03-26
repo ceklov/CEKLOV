@@ -23,7 +23,7 @@
     }
 
     h4 {
-        @apply text-zinc-400 text-xl mt-9;
+      @apply text-zinc-400 text-xl mt-9;
     }
 
     .w-88 {
@@ -77,9 +77,6 @@
       #tech-swiper {
         width: 576px;
       }
-    }
-
-    .w-576 {
     }
 
     @media only screen and (min-width: 1024px) {
