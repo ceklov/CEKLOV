@@ -60,7 +60,7 @@
     /* #region SPECIAL */
 
     .landing-picture {
-      background: url(../assets/laptop.jpg);
+      background: url(../assets/laptop.webp);
       background-size: cover;
       background-position: center;
     }
