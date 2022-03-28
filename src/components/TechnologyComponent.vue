@@ -12,12 +12,12 @@
       id="tech-swiper"
       :modules="modules"
       :slides-per-view="1"
-      :space-between="50"
+      :space-between="10"
       navigation
       autoplay
       :speed="1000"
       :pagination="{ clickable: true }"
-      class="my-9 h-88"
+      class="my-9"
     >
       <swiper-slide
         v-for="(tech, index) in techs"
