@@ -72,14 +72,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-  #home {
-    background: url(../assets/laptop.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-
-
-</style>
