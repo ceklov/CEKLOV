@@ -35,8 +35,8 @@
         "
       >
         <div
-          v-for="caption in captions"
-          :key="caption.id"
+          v-for="(caption, index) in captions"
+          :key="index"
           class="
             flex flex-col
             md:flex-row
@@ -50,7 +50,9 @@
           "
         >
           <h3>
-            {{ caption.text }}
+            <a :href="'/#services'" class="cursor-default">
+              {{ caption.text }}
+            </a>
           </h3>
         </div>
       </div>
@@ -64,9 +66,9 @@ export default {
   components: {},
   setup() {
     const captions = [
-      { id: 1, text: "Software Development" },
-      { id: 2, text: "Web Design" },
-      { id: 3, text: "Quality" },
+      { text: "Software" },
+      { text: "Design" },
+      { text: "Quality" },
     ];
     return { captions };
   },
