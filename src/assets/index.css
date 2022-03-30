@@ -59,12 +59,6 @@
 
     /* #region SPECIAL */
 
-    .landing-picture {
-      background: url(../assets/laptop.jpg);
-      background-size: cover;
-      background-position: center;
-    }
-
     #technology {
       height: 740px;
     }

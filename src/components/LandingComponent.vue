@@ -1,7 +1,7 @@
 <template>
   <section
     id="home"
-    class="landing-picture h-screen flex items-center justify-center bg-fixed"
+    class="h-screen flex items-center justify-center bg-fixed"
   >
     <div
       class="absolute top-0 left-0 w-full h-screen bg-zinc-800 opacity-60 z-10"
@@ -74,3 +74,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+  #home {
+    background: url(../assets/laptop.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+</style>
