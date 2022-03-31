@@ -6,7 +6,7 @@
     >
       <div class="flex items-center ml-3">
         <a class="flex" href="/">
-          <img src="../assets/favicon-32x32.png" class="opacity-90" />
+          <img src="../assets/drawing6.png" class="opacity-90 h-8 w-8" />
         </a>
       </div>
 
