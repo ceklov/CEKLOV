@@ -74,11 +74,12 @@
                 shadow-md
                 my-4
                 lg:mb-0
-                bg-gradient-to-r
-                from-orange-400
-                to-orange-400
+                transition-colors
+                duration-500
+                bg-orange-400
                 text-white
-                hover:from-orange-400 hover:to-zinc-400
+                hover:bg-orange-300
+                hover:text-black
               "
             >
               Send Message
