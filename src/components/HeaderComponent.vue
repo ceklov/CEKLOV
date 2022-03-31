@@ -12,53 +12,39 @@
 
       <div
         id="lg-nav-content"
-        class="
-          hidden
-          lg:flex
-          mr-3
-          w-auto
-          py-0
-          items-center
-        "
+        class="hidden lg:flex mr-3 w-auto py-0 items-center"
       >
-        <ul
-          class="
-            flex
-            text-sm
-            font-medium
-            tracking-widest
-            text-zinc-200
-            mt-2
-          "
-        >
-          <li
-            v-for="link in links"
-            :key="link.id"
-            class="
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-3
-              w-36
-            "
-          >
-            <a :href="'/#' + link.link">{{ link.link }}</a>
-          </li>
-          <li
-            class="
-              uppercase
-              hover:bg-zinc-200
-              hover:text-zinc-800
-              hover:font-semibold
-              px-2
-              mb-3
-              w-36
-            "
-          >
-            <a href="/eklov-resume.pdf" _target="blank">Resume</a>
-          </li>
+        <ul class="flex text-sm font-medium tracking-widest text-zinc-200 mt-2">
+          <a 
+            v-for="(link, index) in links"
+            :key="index"
+            :href="'/#' + link.name"
+            @click="close">
+            <li
+              class="
+                uppercase
+                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
+                px-2
+                mb-3
+                w-36
+              "
+            >
+              {{ link.name }}
+            </li>
+          </a>
+          <a href="/eklov-resume.pdf" target="_blank" @click="close">
+            <li
+              class="
+                uppercase
+                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
+                px-2
+                mb-3
+                w-36
+              "
+            >
+              Resume
+            </li>
+          </a>
         </ul>
       </div>
 
@@ -119,35 +105,40 @@
             mt-2
           "
         >
-          <li
-            v-for="link in links"
-            :key="link.id"
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-36
-              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
-            "
+          <a
+            v-for="(link, index) in links"
+            :key="index"
+            :href="'/#' + link.name"
+            @click="close"
           >
-            <a :href="'/#' + link.link" @click="close">{{ link.link }}</a>
-          </li>
-
-          <li
-            class="
-              text-right
-              uppercase
-              px-2
-              mb-4
-              w-28
-              hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
-            "
-          >
-            <a href="/eklov-resume.pdf" target="_blank" @click="close"
-              >Resume</a
+            <li
+              class="
+                text-right
+                uppercase
+                px-2
+                mb-4
+                w-36
+                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
+              "
             >
-          </li>
+              {{ link.name }}
+            </li>
+          </a>
+
+          <a href="/eklov-resume.pdf" target="_blank" @click="close">
+            <li
+              class="
+                text-right
+                uppercase
+                px-2
+                mb-4
+                w-36
+                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
+              "
+            >
+              Resume
+            </li>
+          </a>
         </ul>
       </div>
     </nav>
@@ -162,9 +153,9 @@ export default {
   components: {},
   setup() {
     const links = [
-      { id: 1, link: "services" },
-      { id: 3, link: "technology" },
-      { id: 4, link: "contact" },
+      { name: "services" },
+      { name: "technology" },
+      { name: "contact" },
     ];
 
     let show = ref(false);
