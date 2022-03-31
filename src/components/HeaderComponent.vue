@@ -163,10 +163,8 @@ export default {
   setup() {
     const links = [
       { id: 1, link: "services" },
-      { id: 2, link: "work" },
       { id: 3, link: "technology" },
       { id: 4, link: "contact" },
-      { id: 5, link: "links" },
     ];
 
     let show = ref(false);
