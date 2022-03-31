@@ -4,15 +4,12 @@
       <h2>Contact</h2>
     </div>
     <div>
-      <h4>Drop me a line</h4>
+      <h4>I'd love to hear from you</h4>
     </div>
-    
-    <div
-      class="flex-grow justify-center px-8 lg:px-20"
-    >
+
+    <div class="flex-grow justify-center px-8 lg:px-20">
       <div class="flex justify-center">
         <div>
-     
           <form
             id="contact-form"
             name="contact-form"
@@ -20,6 +17,7 @@
             data-netlify="true"
             autocomplete="off"
             netlify-honeypot="bot-field"
+            @submit.prevent="handleSubmit"
           >
             <input type="hidden" name="form-name" value="contact-form" />
             <div class="input-animated">
@@ -27,42 +25,58 @@
                 type="text"
                 id="contact-name"
                 name="contact-name"
+                v-model="formState.name"
                 required
+                minLength="2"
+                maxLength="50"
                 pattern="\S+.*"
-                placeholder="the placeholder"
+                placeholder="Name"
               />
               <label htmlFor="contact-name" class="label-name">
                 <span class="content-name"> Name </span>
               </label>
             </div>
+            <span v-if="v$.name.$error">
+              {{ v$.name.$errors[0].$message }}
+            </span>
+
             <div class="input-animated">
               <input
                 type="email"
                 id="contact-email"
                 name="contact-email"
+                v-model="formState.email"
                 required
-                placeholder="the placeholder"
+                placeholder="Email"
               />
               <label htmlFor="contact-email" class="label-email">
                 <span class="content-email"> Email </span>
               </label>
             </div>
+            <span v-if="v$.email.$error">
+              {{ v$.email.$errors[0].$message }}
+            </span>
+
             <div>
               <textarea
                 name="contact-question"
-                placeholder="Your Question"
+                placeholder="Question"
                 id="contact-question"
                 cols="30"
                 rows="5"
                 minLength="10"
                 maxLength="250"
+                v-model="formState.question"
                 required
               ></textarea>
             </div>
+            <span v-if="v$.question.$error">
+              {{ v$.question.$errors[0].$message }}
+            </span>
+
             <button
               type="submit"
               id="submit-button"
-              @click="handleSubmit"
               class="
                 w-full
                 font-semibold
@@ -78,8 +92,7 @@
                 duration-500
                 bg-orange-400
                 text-white
-                hover:bg-orange-300
-                hover:text-black
+                hover:bg-orange-300 hover:text-black
               "
             >
               Send Message
@@ -128,15 +141,37 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, reactive, computed } from "vue";
+import useValidate from "@vuelidate/core";
+import { required, email, minLength, maxLength } from "@vuelidate/validators";
 
 export default {
   name: "ContactComponent",
   components: {},
   setup() {
-    
+
     let showError = ref(false);
     let showSuccess = ref(false);
+
+    const formState = reactive({
+      name: '',
+      email: '',
+      question: '',
+    });
+
+    const rules = computed(() => {
+      return {
+        name: { required, minLength: minLength(2), maxLength: maxLength(50) },
+        email: { required, email },
+        question: {
+          required,
+          minLength: minLength(10),
+          maxLength: maxLength(250),
+        },
+      };
+    });
+
+    const v$ = useValidate(rules, formState);
 
     const handleErrors = (response) => {
       if (!response.ok) {
@@ -145,8 +180,7 @@ export default {
       return response;
     };
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
+    const handleSubmit = async () => {
       const form = document.getElementById("contact-form");
       const formData = new FormData(form);
 
@@ -168,7 +202,9 @@ export default {
     return {
       showError,
       showSuccess,
-      handleSubmit
+      formState,
+      v$,
+      handleSubmit,
     };
   },
 };

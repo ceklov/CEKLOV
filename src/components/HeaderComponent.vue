@@ -39,7 +39,7 @@
                 hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
                 px-2
                 mb-3
-                w-36
+                w-28
               "
             >
               Resume
