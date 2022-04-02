@@ -78,7 +78,7 @@ export default {
 <style scoped>
 
   #home {
-    background: url(../assets/laptop.jpg);
+    background: url(../assets/laptop.avif);
     background-size: cover;
     background-position: center;
   }
