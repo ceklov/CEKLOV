@@ -113,7 +113,7 @@ export default {
         name: "Git",
         src: "git.svg",
         caption:
-          "My primary repository for both personal and professional work.",
+          "My primary source control for both personal and professional work.",
       },
       {
         name: "Jenkins",

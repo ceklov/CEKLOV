@@ -6,13 +6,13 @@
     >
       <div class="flex items-center ml-3">
         <a class="flex" href="/">
-          <img src="../assets/drawing6.png" class="opacity-90 h-8 w-8" />
+          <img src="../assets/favicon.svg" class="opacity-90 h-10 w-10" />
         </a>
       </div>
 
       <div
         id="lg-nav-content"
-        class="hidden lg:flex mr-3 w-auto py-0 items-center"
+        class="hidden lg:flex mr-3 w-auto pt-1 items-center"
       >
         <ul class="flex text-sm font-medium tracking-widest text-zinc-200 mt-2">
           <a 
@@ -48,7 +48,7 @@
         </ul>
       </div>
 
-      <div class="inline-block h-8 mr-3 lg:hidden">
+      <div class="inline-block h-10 mr-3 lg:hidden">
         <button id="nav-button" class="h-full w-full" @click="isOpen">
           <svg
             class="h-full w-auto"

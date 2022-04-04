@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="52.612604"
-     inkscape:cy="114.94849"
+     inkscape:cx="91.512867"
+     inkscape:cy="119.60559"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="3832"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -70,9 +70,22 @@
          x="24.284969"
          y="262.0314"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';stroke-width:0.26458332" /></text>
+    <rect
+       style="fill:#e4e4e7;fill-opacity:1;stroke:none;stroke-width:1.10000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4559"
+       width="64.822914"
+       height="64.822922"
+       x="0"
+       y="232.17708" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
     <text
+       transform="translate(0,-233)"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:50.79999859px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat, Ultra-Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#27272a;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat, Ultra-Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#27272a;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="8.8824406"
        y="274.13245"
        id="text829"><tspan
@@ -80,8 +93,9 @@
          id="tspan827"
          x="8.8824406"
          y="274.13245"
-         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:50.79999859px;font-family:Montserrat;-inkscape-font-specification:'Montserrat, Ultra-Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:0.26458332;fill:#27272a;fill-opacity:1;">C</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:50.79999924px;font-family:Montserrat;-inkscape-font-specification:'Montserrat, Ultra-Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#27272a;fill-opacity:1;stroke-width:0.26458332">C</tspan></text>
     <text
+       transform="translate(0,-233)"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat, Ultra-Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#27272a;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="21.166666"
