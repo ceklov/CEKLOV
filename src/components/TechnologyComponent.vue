@@ -8,59 +8,72 @@
       <h4>Including but not limited to</h4>
     </div>
 
-    <swiper
-      id="tech-swiper"
-      :modules="modules"
-      :slides-per-view="1"
-      :space-between="10"
-      navigation
-      autoplay
-      :speed="1000"
-      :pagination="{ clickable: true }"
-      class="my-9"
+    <Waypoint
+      :options="options"
+      @change="startSliding"
     >
-      <swiper-slide
-        v-for="(tech, index) in techs"
-        :key="index"
-        :virtualIndex="index"
-        class="px-3 flex flex-col justify-center"
-        data-swiper-autoplay="4200"
+      <swiper
+        id="tech-swiper"
+        :modules="modules"
+        :slides-per-view="1"
+        :space-between="10"
+        navigation
+        :speed="1000"
+        :pagination="{ clickable: true }"
+        class="my-9"
       >
-        <img
-          :src="require('@/assets/technology/' + tech.src)"
-          :alt="tech.name"
-        />
-        <h5 class="text-zinc-200 text-2xl mt-6 lg:mt-5">
-          {{ tech.name }}
-        </h5>
-        <p class="text-zinc-200 mt-6 mb-12 lg:mt-5">
-          {{ tech.caption }}
-        </p>
-      </swiper-slide>
-
-    </swiper>
+        <swiper-slide
+          v-for="(tech, index) in techs"
+          :key="index"
+          :virtualIndex="index"
+          class="px-3 flex flex-col justify-center"
+          data-swiper-autoplay="4200"
+        >
+          <img
+            :src="require('@/assets/technology/' + tech.src)"
+            :alt="tech.name"
+          />
+          <h5 class="text-zinc-200 text-2xl mt-6 lg:mt-5">
+            {{ tech.name }}
+          </h5>
+          <p class="text-zinc-200 mt-6 mb-12 lg:mt-5">
+            {{ tech.caption }}
+          </p>
+        </swiper-slide>
+      </swiper>
+    </Waypoint>
   </section>
 </template>
 
 <script>
-  // import Swiper core and required modules
   import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-
-  // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
-
-  // Import Swiper styles
   import 'swiper/css';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
+
+  import { Waypoint } from "vue-waypoint";
 
 export default {
   name: "TechnologyComponent",
   components: {
     Swiper,
     SwiperSlide,
+    Waypoint
   },
   setup() {
+    const options = {
+      root: document.getElementById("services-wrapper"),
+      rootMargin: "0px",
+      threshold: 0.75
+    }
+
+    const startSliding = (waypointState) => {
+      if (waypointState.going === "IN" && !document.querySelector("#tech-swiper").swiper.autoplay.running) {
+        document.querySelector("#tech-swiper").swiper.autoplay.start();
+      }
+    }
+
     const techs = [
       {
         name: "Java",
@@ -124,6 +137,8 @@ export default {
     ];
 
     return {
+      startSliding,
+      options,
       techs,
       modules: [Navigation, Pagination, A11y, Autoplay],
     };
