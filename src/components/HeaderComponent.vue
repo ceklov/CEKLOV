@@ -6,7 +6,7 @@
     >
       <div class="flex items-center ml-3">
         <a class="flex" href="/">
-          <img src="../assets/home-icon.svg" class="opacity-90 h-10 w-10" />
+          <img src="../assets/home-icon.svg" class="opacity-90 h-10 w-10" alt="Laptop with code displayed" />
         </a>
       </div>
 
