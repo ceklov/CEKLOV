@@ -1,7 +1,7 @@
 <template>
-  <section id="contact" class="lower-section">
+  <section id="contact" class="lower-section bg-zinc-800 pb-24 md:pb-32">
     <div>
-      <h2>Contact</h2>
+      <h2 class="text-zinc-200">Contact</h2>
     </div>
     <div>
       <h4>I'd love to hear from you</h4>

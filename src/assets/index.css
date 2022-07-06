@@ -59,6 +59,10 @@
 
     /* #region SPECIAL */
 
+    .links-list span {
+      @apply px-6;
+    }
+
     #technology {
       height: 740px;
     }

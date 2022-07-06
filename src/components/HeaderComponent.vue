@@ -23,10 +23,10 @@
             <li
               class="
                 uppercase
-                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
                 px-2
                 mb-3
                 w-36
+                transition-colors duration-500 hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
               "
             >
               {{ link.name }}
@@ -36,10 +36,10 @@
             <li
               class="
                 uppercase
-                hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
                 px-2
                 mb-3
                 w-28
+                transition-colors duration-500 hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
               "
             >
               Resume
@@ -155,6 +155,7 @@ export default {
     const links = [
       { name: "services" },
       { name: "technology" },
+      { name: "links" },
       { name: "contact" },
     ];
 

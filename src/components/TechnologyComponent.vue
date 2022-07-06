@@ -18,7 +18,7 @@
         :slides-per-view="1"
         :space-between="10"
         navigation
-        :speed="1000"
+        :speed="800"
         :pagination="{ clickable: true }"
         class="my-9"
       >
