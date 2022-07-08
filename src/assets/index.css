@@ -55,6 +55,23 @@
       100%  { color: #52525B }
     }
 
+    .pre-slide-in{
+      position: absolute;
+      left: -1000px;
+    }
+
+    .slide-in {
+      position: relative;
+      -webkit-animation: slideIn 0.5s forwards;
+      -webkit-animation-delay: 0.2s;
+      animation: slideIn 0.5s forwards;
+      animation-delay: 0.2s;
+  }
+    
+  @keyframes slideIn {
+      100% { left: 0; }
+  }
+
     /* #endregion */
 
     /* #region SPECIAL */

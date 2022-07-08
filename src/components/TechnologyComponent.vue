@@ -63,7 +63,7 @@ export default {
   },
   setup() {
     const options = {
-      root: document.getElementById("services-wrapper"),
+      root: document.getElementById("technology"),
       rootMargin: "0px",
       threshold: 0.75
     }

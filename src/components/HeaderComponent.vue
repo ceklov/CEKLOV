@@ -23,9 +23,8 @@
             <li
               class="
                 uppercase
-                px-2
+                px-7
                 mb-3
-                w-36
                 transition-colors duration-500 hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
               "
             >
@@ -36,9 +35,8 @@
             <li
               class="
                 uppercase
-                px-2
+                px-7
                 mb-3
-                w-28
                 transition-colors duration-500 hover:bg-zinc-200 hover:text-zinc-800 hover:font-semibold
               "
             >
