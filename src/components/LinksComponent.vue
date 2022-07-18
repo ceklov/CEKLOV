@@ -124,6 +124,98 @@
             </svg>
           </a>
         </span>
+        <span class="pre-slide-in">
+          <a href="https://www.dsmchiropractors.com/" target="_blank">
+            <svg
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              width="64"
+              height="64"
+              viewBox="0 0 15 15"
+              version="1.1"
+              id="svg8"
+              sodipodi:docname="favicon.svg"
+              inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+            >
+              <g
+                inkscape:label="Layer 1"
+                inkscape:groupmode="layer"
+                id="layer1"
+                transform="translate(0,-282)"
+              >
+                <rect
+                  id="rect12"
+                  width="8.4666672"
+                  height="8.9958267"
+                  x="3.4395833"
+                  y="285.09375"
+                  style="
+                    fill: none;
+                    stroke: #2f855a;
+                    stroke-width: 0.86832273;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-opacity: 1;
+                  "
+                />
+                <rect
+                  style="
+                    fill: none;
+                    stroke: #cbd5e0;
+                    stroke-width: 0.93252218;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-opacity: 1;
+                  "
+                  id="rect836"
+                  width="10.054167"
+                  height="10.583325"
+                  x="2.6458333"
+                  y="284.29999"
+                />
+                <rect
+                  style="
+                    fill: none;
+                    stroke: #cbd5e0;
+                    stroke-width: 0.77920985;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-opacity: 1;
+                  "
+                  id="rect840"
+                  width="6.8791671"
+                  height="7.4083414"
+                  x="4.2333331"
+                  y="285.88751"
+                  inkscape:export-xdpi="85.258743"
+                  inkscape:export-ydpi="85.258743"
+                />
+                <rect
+                  style="
+                    fill: none;
+                    stroke: #2f855a;
+                    stroke-width: 0.95790529;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-opacity: 1;
+                  "
+                  id="rect819"
+                  width="6.8791671"
+                  height="7.4083414"
+                  x="4.2333331"
+                  y="285.88751"
+                  inkscape:export-xdpi="85.258743"
+                  inkscape:export-ydpi="85.258743"
+                />
+              </g>
+            </svg>
+          </a>
+        </span>
       </div>
     </Waypoint>
   </section>
@@ -135,14 +227,14 @@ import { Waypoint } from "vue-waypoint";
 export default {
   name: "LinksComponent",
   components: {
-    Waypoint
+    Waypoint,
   },
   setup() {
     const options = {
       root: document.getElementById("links"),
       rootMargin: "0px",
-      threshold: 0.75
-    }
+      threshold: 0.75,
+    };
 
     let visible = false;
 
@@ -152,12 +244,14 @@ export default {
         let spans = waypointState.el.getElementsByTagName("span");
         let delay = 0;
         for (let span of spans) {
-          setTimeout(function() { span.classList.add("slide-in") }, delay * 300);
+          setTimeout(function () {
+            span.classList.add("slide-in");
+          }, delay * 300);
           delay++;
         }
         visible = true;
       }
-    }
+    };
 
     return {
       slideIn,
